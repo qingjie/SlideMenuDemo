@@ -20,6 +20,15 @@ class CenterViewController: UIViewController {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var creatorLabel: UILabel!
     
+    let containerView = UIView(frame: CGRectMake(100, 50, 100, 100))
+    let containerView1 = UIView(frame: CGRectMake(100, 50, 100, 100))
+    
+    
+    var tmpViews1 = Array<UIView>()
+    var tmpViews2 = Array<UIView>()
+    var tmpViews3 = Array<UIView>()
+    var tmpViews4 = Array<UIView>()
+    var tmpViews5 = Array<UIView>()
     
     var delegate: CenterViewControllerDelegate?
     
@@ -34,23 +43,43 @@ class CenterViewController: UIViewController {
 
 extension CenterViewController: SidePanelViewControllerDelegate {
     func animalSelected(animal: Animal) {
-        imageView.image = animal.image
+        
+        println(animal)
+        //removeMapView()
+        //removeProfileView()
+        //loadMapView()
+        
+        //imageView.image = animal.image
         //titleLabel.text = animal.title
         var str = animal.title as String
-        titleLabel.text = str
-        creatorLabel.text = animal.creator
-        
+        self.navigationItem.title = str
+        //titleLabel.text = str
+        //creatorLabel.text = animal.creator
+        //println(str)
         switch str {
         case "Sleeping Cat":
             println("Sleeping Cat")
-            //Show Sleeping Cat ViewController
+            //self.view.removeFromSuperview()
+            removeMapView()
+            removeProfileView()
+            loadMapView()
+//            removeCV()
+//            addContainerView()
+          
         case "Pussy Cat":
             println("Pussy Cat")
-            //Show Pussy Cat ViewController
+            //self.view.removeFromSuperview()
+            removeMapView()
+            removeProfileView()
+            loadProfileView()
+//            removeCV()
+//            addContainerView1()
         case "Korat Domestic Cat":
             println("Korat Domestic Cat")
-            //Show Korat Domestic Cat ViewController
-        default:break
+           
+        default:
+            
+            break
         }
         
         
@@ -58,9 +87,216 @@ extension CenterViewController: SidePanelViewControllerDelegate {
     }
     
     
+    func loadMapView(){
+        let v = MapView()
+        v.frame = CGRectMake(0, 0, 300, 400)
+        self.view.addSubview(v)
+    }
+    
+    func removeMapView(){
+        if(view.subviews.count > 0){
+            for subview in view.subviews {
+                if subview is MapView {
+                    println(subview)
+                    subview.removeFromSuperview()
+                }
+            }
+        }
+    }
+    
+    func loadProfileView(){
+        let v = ProfileView()
+        v.frame = CGRectMake(0, 0, 300, 400)
+        self.view.addSubview(v)
+    }
+    
+    func removeProfileView(){
+        if(view.subviews.count > 0){
+            for subview in view.subviews {
+                if subview is ProfileView {
+                    println(subview)
+                    subview.removeFromSuperview()
+                }
+            }
+        }
+    }
     
     
-  
+    
+    
+    
+    
+    
+    
+    
+    
+    func addContainerView(){
+        let label1 = UILabel(frame: CGRectMake(100, 200, 200, 30))
+        label1.backgroundColor = UIColor(white: 0.3, alpha: 0.3)
+        label1.textColor = UIColor.redColor()
+        label1.textAlignment = NSTextAlignment.Left
+        label1.text = "qingjie"
+        
+        containerView.backgroundColor = UIColor.blueColor()
+        
+        
+        containerView.addSubview(label1)
+        tmpViews4.append(containerView)
+        self.view.addSubview(containerView)
+    }
+    
+    func addContainerView1(){
+        let label2 = UILabel(frame: CGRectMake(100, 200, 200, 30))
+        label2.backgroundColor = UIColor(white: 0.3, alpha: 0.3)
+        label2.textColor = UIColor.greenColor()
+        label2.textAlignment = NSTextAlignment.Left
+        label2.text = "zhao"
+        
+        containerView1.backgroundColor = UIColor.greenColor()
+        
+        containerView1.addSubview(label2)
+        tmpViews5.append(containerView1)
+        self.view.addSubview(containerView1)
+    }
+    
+    func removeCV(){
+        removeContainerView()
+        removeContainerView1()
+    }
+    
+    func removeContainerView(){
+        println(tmpViews4.count)
+        if(tmpViews4.count > 0){
+            for subview in tmpViews4 {
+                println(subview)
+                subview.removeFromSuperview()
+            }
+            //containerView.removeFromSuperview()
+        }
+        
+        
+    }
+    
+    func removeContainerView1(){
+        if(tmpViews5.count > 0){
+            for subview in tmpViews5 {
+                println(subview)
+                subview.removeFromSuperview()
+            }
+        }
+        //containerView1.removeFromSuperview()
+        
+    }
+    
+    
+    func removeSubV(){
+        for subview in self.view.subviews {
+            if !(subview is UILayoutSupport) {
+                print(subview)
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    func removeSubLable(){
+        for subview in view.subviews {
+            if subview is UILabel {
+                println(subview)
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    func unloadView(){
+        unloadView1()
+        unloadView2()
+        unloadView3()
+        
+    }
+    
+    func loadView1(string:String){
+        
+        var DynamicView=UIView(frame: CGRectMake(100, 200, 200, 200))
+        DynamicView.backgroundColor=UIColor.greenColor()
+        DynamicView.layer.cornerRadius=25
+        DynamicView.layer.borderWidth=2
+        tmpViews1.append(DynamicView)
+        
+        let label1 = UILabel(frame: CGRectMake(100, 200, 200, 30))
+        label1.backgroundColor = UIColor(white: 0.3, alpha: 0.3)
+        label1.textColor = UIColor.redColor()
+        label1.textAlignment = NSTextAlignment.Left
+        label1.text = "Syracuse" + string
+        DynamicView.addSubview(label1)
+        tmpViews1.append(label1)
+        self.view.addSubview(DynamicView)
+    }
+    
+    func unloadView1(){
+        if(tmpViews1.count > 0){
+            for subview in tmpViews1 {
+                println(subview)
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    func loadView2(){
+        
+        var sliderDemo = UISlider(frame:CGRectMake(20, 260, 280, 20))
+        sliderDemo.minimumValue = 0
+        sliderDemo.maximumValue = 100
+        sliderDemo.continuous = true
+        sliderDemo.tintColor = UIColor.orangeColor()
+        sliderDemo.value = 50
+        sliderDemo.addTarget(self, action: "sliderValueDidChange:", forControlEvents: .ValueChanged)
+        tmpViews3.append(sliderDemo)
+        self.view.addSubview(sliderDemo)
+    }
+    
+    func unloadView2(){
+        if(tmpViews2.count > 0){
+            for subview in tmpViews2 {
+                println(subview)
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    
+    func sliderValueDidChange(sender:UISlider!)
+    {
+        println("value--\(sender.value)")
+    }
+    
+    func loadView3(){
+        var switchDemo=UISwitch(frame:CGRectMake(150, 300, 0, 0));
+        switchDemo.on = true
+        switchDemo.setOn(true, animated: false);
+        switchDemo.addTarget(self, action: "switchValueDidChange:", forControlEvents: .ValueChanged);
+        tmpViews3.append(switchDemo)
+        self.view.addSubview(switchDemo);
+    }
+    
+    func unloadView3(){
+        if(tmpViews3.count > 0){
+            for subview in tmpViews3 {
+                println(subview)
+                subview.removeFromSuperview()
+            }
+        }
+    }
+    
+    func switchValueDidChange(sender:UISwitch!)
+    {
+        if (sender.on == true){
+            println("on")
+        }
+        else{
+            println("off")
+        }
+    }
+    
     
     
 }

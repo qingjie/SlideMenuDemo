@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapView" customModule="SlideMenuDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonA" destination="6ZL-T9-8u0" id="NAm-41-1tV"/>
+                <outlet property="creatorLabel" destination="aqh-lF-KV5" id="5rZ-ew-0T7"/>
+                <outlet property="imageView" destination="bnv-xi-p2a" id="HYQ-xQ-eQk"/>
+                <outlet property="titleLabel" destination="SsN-uq-DQH" id="tCA-gB-c3z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="GYE-P5-4qs">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="ID-10029135.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bnv-xi-p2a">
+                    <rect key="frame" x="116" y="33" width="400" height="359"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumping School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SsN-uq-DQH">
+                    <rect key="frame" x="256" y="413" width="121" height="20"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vlado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqh-lF-KV5">
+                    <rect key="frame" x="299" y="441" width="37" height="17"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZL-T9-8u0">
+                    <rect key="frame" x="299" y="473" width="30" height="30"/>
+                    <state key="normal" title="A">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnA:" destination="-1" eventType="touchUpInside" id="Q83-e6-KUB"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="aqh-lF-KV5" firstAttribute="top" secondItem="SsN-uq-DQH" secondAttribute="bottom" constant="8" symbolic="YES" id="2aN-q4-6mJ"/>
+                <constraint firstItem="aqh-lF-KV5" firstAttribute="leading" secondItem="GYE-P5-4qs" secondAttribute="leading" constant="299" id="7Tx-rt-KEq"/>
+                <constraint firstItem="6ZL-T9-8u0" firstAttribute="top" secondItem="aqh-lF-KV5" secondAttribute="bottom" constant="15" id="Xh2-Tm-2hL"/>
+                <constraint firstItem="bnv-xi-p2a" firstAttribute="top" secondItem="GYE-P5-4qs" secondAttribute="top" constant="33" id="Xrw-yX-VAJ"/>
+                <constraint firstAttribute="trailing" secondItem="bnv-xi-p2a" secondAttribute="trailing" constant="84" id="dIl-wP-8tz"/>
+                <constraint firstAttribute="bottom" secondItem="6ZL-T9-8u0" secondAttribute="bottom" constant="97" id="fMb-j0-e6n"/>
+                <constraint firstItem="aqh-lF-KV5" firstAttribute="leading" secondItem="6ZL-T9-8u0" secondAttribute="leading" id="fOv-5f-3zK"/>
+                <constraint firstItem="SsN-uq-DQH" firstAttribute="top" secondItem="bnv-xi-p2a" secondAttribute="bottom" constant="21" id="ifl-Eb-te7"/>
+                <constraint firstItem="bnv-xi-p2a" firstAttribute="centerX" secondItem="SsN-uq-DQH" secondAttribute="centerX" id="inm-Wg-qLh"/>
+                <constraint firstItem="bnv-xi-p2a" firstAttribute="leading" secondItem="GYE-P5-4qs" secondAttribute="leading" constant="116" id="q21-iQ-Mki"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="830" y="309"/>
+        </scrollView>
+    </objects>
+    <resources>
+        <image name="ID-10029135.jpg" width="400" height="359"/>
+    </resources>
+</document>

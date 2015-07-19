@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Center View Controller-->
@@ -16,42 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumping School" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXc-U7-GAO">
-                                <rect key="frame" x="239" y="433" width="121" height="20"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vlado" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Woc-5Y-TrM">
-                                <rect key="frame" x="282" y="461" width="37" height="17"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Images courtesy of FreeDigitalPhotos.net" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaV-og-bIj">
-                                <rect key="frame" x="194" y="576" width="213" height="14"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ID-10029135.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cpr-Pr-sad">
-                                <rect key="frame" x="0.0" y="64" width="600" height="350"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="350" id="kYv-75-JRQ"/>
-                                </constraints>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiN-aE-gY7" customClass="ProfileView" customModule="SlideMenuDemo" customModuleProvider="target">
+                                <rect key="frame" x="150" y="150" width="400" height="400"/>
+                                <color key="backgroundColor" red="0.35852693260000001" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esq-Qn-EcS" customClass="MapView" customModule="SlideMenuDemo" customModuleProvider="target">
+                                <rect key="frame" x="55" y="56" width="500" height="500"/>
+                                <color key="backgroundColor" red="1" green="0.1139326318" blue="0.17889456400000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="yaV-og-bIj" firstAttribute="centerX" secondItem="Woc-5Y-TrM" secondAttribute="centerX" id="01D-2i-HLf"/>
-                            <constraint firstItem="yaV-og-bIj" firstAttribute="centerX" secondItem="49R-9C-N5h" secondAttribute="centerX" id="7Wu-yk-gWD"/>
-                            <constraint firstItem="BXc-U7-GAO" firstAttribute="leading" secondItem="49R-9C-N5h" secondAttribute="leading" constant="239" id="90x-nS-awg"/>
-                            <constraint firstItem="cpr-Pr-sad" firstAttribute="centerX" secondItem="Woc-5Y-TrM" secondAttribute="centerX" id="ASO-j7-Z7P"/>
-                            <constraint firstItem="cpr-Pr-sad" firstAttribute="leading" secondItem="49R-9C-N5h" secondAttribute="leading" id="BtG-7s-TLF"/>
-                            <constraint firstItem="lZ6-df-bJ3" firstAttribute="top" secondItem="yaV-og-bIj" secondAttribute="bottom" constant="10" id="ErU-En-3iG"/>
-                            <constraint firstItem="BXc-U7-GAO" firstAttribute="top" secondItem="cpr-Pr-sad" secondAttribute="bottom" constant="19" id="QYN-ah-rvY"/>
-                            <constraint firstItem="cpr-Pr-sad" firstAttribute="top" secondItem="jsH-lI-XSI" secondAttribute="bottom" id="Zta-dj-KCL"/>
-                            <constraint firstItem="Woc-5Y-TrM" firstAttribute="top" secondItem="BXc-U7-GAO" secondAttribute="bottom" constant="8" symbolic="YES" id="nic-CN-5G7"/>
+                            <constraint firstItem="XiN-aE-gY7" firstAttribute="top" secondItem="jsH-lI-XSI" secondAttribute="bottom" constant="86" id="70g-PW-k5Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XiN-aE-gY7" secondAttribute="trailing" constant="34" id="8ca-LL-1ny"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="esq-Qn-EcS" secondAttribute="trailing" constant="29" id="AyJ-Fd-Dbf"/>
+                            <constraint firstItem="esq-Qn-EcS" firstAttribute="top" secondItem="49R-9C-N5h" secondAttribute="topMargin" constant="56" id="Gq2-1a-rYL"/>
+                            <constraint firstItem="lZ6-df-bJ3" firstAttribute="top" secondItem="esq-Qn-EcS" secondAttribute="bottom" constant="44" id="M3F-1Y-TSy"/>
+                            <constraint firstItem="lZ6-df-bJ3" firstAttribute="top" secondItem="XiN-aE-gY7" secondAttribute="bottom" constant="50" id="T6J-B9-4WS"/>
+                            <constraint firstItem="esq-Qn-EcS" firstAttribute="leading" secondItem="49R-9C-N5h" secondAttribute="leadingMargin" constant="39" id="ZgO-cI-1K9"/>
+                            <constraint firstItem="XiN-aE-gY7" firstAttribute="leading" secondItem="49R-9C-N5h" secondAttribute="leading" constant="150" id="t2T-hB-7sW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Slide Out Tutorial" id="mhS-XJ-D0M">
@@ -63,11 +47,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="creatorLabel" destination="Woc-5Y-TrM" id="KhL-dh-aGz"/>
-                        <outlet property="imageView" destination="cpr-Pr-sad" id="avo-9i-NxE"/>
-                        <outlet property="titleLabel" destination="BXc-U7-GAO" id="osD-LW-Fca"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xqO-1F-ryn" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,7 +153,6 @@
     </scenes>
     <resources>
         <image name="ID-100113060.jpg" width="400" height="266"/>
-        <image name="ID-10029135.jpg" width="400" height="359"/>
         <image name="menu_hamburger1" width="30" height="30"/>
     </resources>
 </document>

@@ -29,6 +29,12 @@
 		503FAC251B59F1B60091D388 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503FAC241B59F1B60091D388 /* Animal.swift */; };
 		503FAC271B59F1CC0091D388 /* CenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503FAC261B59F1CC0091D388 /* CenterViewController.swift */; };
 		503FAC291B59F1F80091D388 /* SidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503FAC281B59F1F80091D388 /* SidePanelViewController.swift */; };
+		508050031B5C13CE009067E0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508050021B5C13CE009067E0 /* MapView.swift */; };
+		508050051B5C13E1009067E0 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508050041B5C13E1009067E0 /* MapView.xib */; };
+		508050071B5C13F8009067E0 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508050061B5C13F8009067E0 /* ProfileView.xib */; };
+		508050091B5C140C009067E0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508050081B5C140C009067E0 /* ProfileView.swift */; };
+		5080500B1B5C142F009067E0 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080500A1B5C142F009067E0 /* SettingView.swift */; };
+		5080500D1B5C1444009067E0 /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5080500C1B5C1444009067E0 /* SettingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,12 @@
 		503FAC241B59F1B60091D388 /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		503FAC261B59F1CC0091D388 /* CenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterViewController.swift; sourceTree = "<group>"; };
 		503FAC281B59F1F80091D388 /* SidePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SidePanelViewController.swift; sourceTree = "<group>"; };
+		508050021B5C13CE009067E0 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		508050041B5C13E1009067E0 /* MapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		508050061B5C13F8009067E0 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		508050081B5C140C009067E0 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5080500A1B5C142F009067E0 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		5080500C1B5C1444009067E0 /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,12 @@
 				503FAC241B59F1B60091D388 /* Animal.swift */,
 				503FABE41B59F0790091D388 /* ViewController.swift */,
 				503FABE61B59F0790091D388 /* Main.storyboard */,
+				508050021B5C13CE009067E0 /* MapView.swift */,
+				508050041B5C13E1009067E0 /* MapView.xib */,
+				508050081B5C140C009067E0 /* ProfileView.swift */,
+				508050061B5C13F8009067E0 /* ProfileView.xib */,
+				5080500A1B5C142F009067E0 /* SettingView.swift */,
+				5080500C1B5C1444009067E0 /* SettingView.xib */,
 				503FABE91B59F0790091D388 /* Images.xcassets */,
 				503FABEB1B59F0790091D388 /* LaunchScreen.xib */,
 				503FABE01B59F0790091D388 /* Supporting Files */,
@@ -257,8 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				503FABE81B59F0790091D388 /* Main.storyboard in Resources */,
+				5080500D1B5C1444009067E0 /* SettingView.xib in Resources */,
 				503FAC191B59F1670091D388 /* ID-10091745.jpg in Resources */,
 				503FAC131B59F1670091D388 /* ID-10019208.jpg in Resources */,
+				508050051B5C13E1009067E0 /* MapView.xib in Resources */,
 				503FAC151B59F1670091D388 /* ID-10041194.jpg in Resources */,
 				503FAC141B59F1670091D388 /* ID-10022760.jpg in Resources */,
 				503FAC161B59F1670091D388 /* ID-10047796.jpg in Resources */,
@@ -270,6 +290,7 @@
 				503FAC1A1B59F1670091D388 /* ID-10092572.jpg in Resources */,
 				503FABED1B59F0790091D388 /* LaunchScreen.xib in Resources */,
 				503FABEA1B59F0790091D388 /* Images.xcassets in Resources */,
+				508050071B5C13F8009067E0 /* ProfileView.xib in Resources */,
 				503FAC111B59F1670091D388 /* ID-10011404.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +314,10 @@
 				503FAC251B59F1B60091D388 /* Animal.swift in Sources */,
 				503FAC231B59F1A50091D388 /* ContainerViewController.swift in Sources */,
 				503FABE31B59F0790091D388 /* AppDelegate.swift in Sources */,
+				5080500B1B5C142F009067E0 /* SettingView.swift in Sources */,
 				503FAC271B59F1CC0091D388 /* CenterViewController.swift in Sources */,
+				508050091B5C140C009067E0 /* ProfileView.swift in Sources */,
+				508050031B5C13CE009067E0 /* MapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +513,7 @@
 				503FABFE1B59F07A0091D388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		503FABFF1B59F07A0091D388 /* Build configuration list for PBXNativeTarget "SlideMenuDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +522,7 @@
 				503FAC011B59F07A0091D388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
